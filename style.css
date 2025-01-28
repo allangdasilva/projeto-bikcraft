@@ -27,14 +27,18 @@ body {
       list-style: none;
 
       li {
-        background: #fff;
-
         a {
           display: inline-block;
           padding: 15px 30px;
           text-transform: uppercase;
           text-decoration: none;
+          border: 2px solid transparent;
           color: #000;
+          background: #fff;
+
+          &:hover {
+            border-color: #e21;
+          }
         }
       }
     }
@@ -55,11 +59,11 @@ body {
     padding: 40px;
     background: #fff;
 
-    span {
+    &::before {
+      content: "";
       position: absolute;
       top: 30px;
       right: -30px;
-
       width: 60px;
       height: 4px;
 
@@ -74,12 +78,14 @@ body {
     }
     a {
       padding: 15px 30px;
-      border-radius: 4px;
-      font-weight: 600;
       text-transform: uppercase;
       text-decoration: none;
       color: #fff;
       background: #e21;
+      transition: 0.3s;
+      &:hover {
+        background: #ac190c;
+      }
     }
   }
   img {
@@ -92,6 +98,8 @@ body {
     font-size: 64px;
     text-transform: uppercase;
     color: rgba(0, 0, 0, 0.2);
+
+    background-image: url(./images/onda.svg);
   }
   .vantagens {
     display: grid;
@@ -103,6 +111,14 @@ body {
       display: grid;
       grid-template-columns: auto 1fr;
       gap: 10px 20px;
+      padding: 20px;
+      border-left: 3px solid transparent;
+      &:hover {
+        border-color: #e21;
+      }
+      &:nth-child(odd) {
+        background-color: #eeeeee;
+      }
 
       p {
         font-size: 18px;
