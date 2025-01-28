@@ -84,7 +84,7 @@ body {
       background: #e21;
       transition: 0.3s;
       &:hover {
-        background: #ac190c;
+        background: #900;
       }
     }
   }
